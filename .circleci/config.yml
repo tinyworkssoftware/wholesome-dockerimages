@@ -8,8 +8,8 @@ jobs:
       - run:
           name: Build Image
           command: |
-            docker build -f dotnetcore2.2-sonar.dockerfile -t bockyang/dotnet-core:sdk2.2-sonar
-            docker build -f dotnetcore3.0-sonar.dockerfile -t bockyang/dotnet-core:sdk3.0-sonar
+            docker build -f dotnetcore2.2-sonar.dockerfile -t bockyang/dotnet-core:sdk2.2-sonar .
+            docker build -f dotnetcore3.0-sonar.dockerfile -t bockyang/dotnet-core:sdk3.0-sonar .
       - run:
           name: Push  to DockerHub
           command: |

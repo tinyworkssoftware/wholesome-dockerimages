@@ -2,7 +2,7 @@ version: 2
 jobs:
   build:
     docker:
-      - image: circleci/npm
+      - image: circleci/node:lts
     steps:
       - checkout
       - run:
@@ -16,10 +16,12 @@ jobs:
             echo "To be implemented"
       - setup_remote_docker:
           docker_layer_caching: true
+      
 workflows:
   version: 2
-  build-push:
-    jobs: 
-      - build
-
-      
+  build:
+    jobs:
+      - build:
+          filters:
+            branches:
+              only: master

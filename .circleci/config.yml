@@ -5,6 +5,7 @@ jobs:
       - image: docker:19.03-rc-git
     steps:
       - checkout
+      - setup_remote_docker
       - run:
           name: Build Image
           command: |

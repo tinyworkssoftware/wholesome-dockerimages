@@ -1,0 +1,19 @@
+version: 2
+jobs:
+  build-push:
+    docker:
+      - image: circleci/npm
+    steps:
+      - checkout
+      - run:
+          name: Build Image
+          command: |
+            docker build -f dotnetcore2.2-sonar.dockerfile -t bockyang/dotnet-core:sdk2.2-sonar
+            docker build -f dotnetcore3.0-sonar.dockerfile -t bockyang/dotnet-core:sdk3.0-sonar
+      - run:
+          name: Push  to DockerHub
+          command: |
+            echo "To be implemented"
+      - setup_remote_docker:
+          docker_layer_caching: true
+

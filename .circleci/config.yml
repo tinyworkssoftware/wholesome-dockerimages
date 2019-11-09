@@ -14,7 +14,8 @@ jobs:
       - run:
           name: Push to DockerHub
           command: |
-            echo "$docker_user" | docker login -u "$docker_pw" --password-stdin
+            echo $DOCKER_USER
+            echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
             docker push tinyworks/dotnet-core
 workflows:
   version: 2

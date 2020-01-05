@@ -9,11 +9,11 @@ jobs:
       - run:
           name: Build Image
           command: |
-            docker build -f dotnetcore2.2-sonar.dockerfile -t tinyworks/dotnet-core:sdk2.2-sonar .
-            docker build -f dotnetcore3.0-sonar.dockerfile -t tinyworks/dotnet-core:sdk3.0-sonar .
-            docker build -f dotnetcore3.1-sonar.dockerfile -t tinyworks/dotnet-core:sdk3.1-sonar .
+            #docker build -f dotnetcore2.2-sonar.dockerfile -t tinyworks/dotnet-core:sdk2.2-sonar .
+            #docker build -f dotnetcore3.0-sonar.dockerfile -t tinyworks/dotnet-core:sdk3.0-sonar .
+            #docker build -f dotnetcore3.1-sonar.dockerfile -t tinyworks/dotnet-core:sdk3.1-sonar .
             docker build -f dotnetcore3.1-mono.dockerfile -t tinyworks/dotnet-core:sdk3.1-mono .
-            docker build -f gcloud270.0.0-newman.dockerfile -t tinyworks/gcloud-sdk:270.0.0-newman-alpine .
+            #docker build -f gcloud270.0.0-newman.dockerfile -t tinyworks/gcloud-sdk:270.0.0-newman-alpine .
       - run:
           name: Push to DockerHub
           command: |

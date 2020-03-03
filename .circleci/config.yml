@@ -17,7 +17,7 @@ jobs:
           command: |
             echo $DOCKER_USER
             echo $DOCKER_PASSWORD | docker login -u $DOCKER_USER --password-stdin
-            docker push tinyworks/dotnet-core
+            # docker push tinyworks/dotnet-core
             docker push tinyworks/azcli
 
 workflows:

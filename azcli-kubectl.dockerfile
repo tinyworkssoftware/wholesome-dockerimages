@@ -17,3 +17,4 @@ RUN curl -LO https://storage.googleapis.com/kubernetes-release/release/v1.17.0/b
 RUN chmod +x ./kubectl
 RUN mv ./kubectl /usr/local/bin/kubectl
 RUN kubectl version --client
+ENV PATH="/azure-cli/bin/:$PATH"

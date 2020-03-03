@@ -9,8 +9,8 @@ jobs:
       - run:
           name: Build Image
           command: |
-            docker build -f dotnetcore3.1-sonar.dockerfile -t tinyworks/dotnet-core:sdk3.1-sonar .
-            docker build -f dotnetcore3.1-mono.dockerfile -t tinyworks/dotnet-core:sdk3.1-mono .
+            # docker build -f dotnetcore3.1-sonar.dockerfile -t tinyworks/dotnet-core:sdk3.1-sonar .
+            # docker build -f dotnetcore3.1-mono.dockerfile -t tinyworks/dotnet-core:sdk3.1-mono .
             docker build -f azcli-kubectl.dockerfile -t tinyworks/azcli:2.1.0-alpine .
       - run:
           name: Push to DockerHub

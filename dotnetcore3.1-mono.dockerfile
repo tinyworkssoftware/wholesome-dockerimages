@@ -1,6 +1,6 @@
 FROM mcr.microsoft.com/dotnet/core/sdk:3.1
 
-ENV MONO_VERSION 6.6.0.161
+ENV MONO_VERSION 6.8.0.105
 RUN apt-get update \
   && apt-get install -y --no-install-recommends gnupg dirmngr \
   && rm -rf /var/lib/apt/lists/* \
